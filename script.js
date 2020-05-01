@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//characters object
+//characters object(Attempted another method for chars)
 // var passCharacters = {
 //   lowerChar: 'abcdefghijklmnopqrstuvwxz',
 //   upperChar: 'ABCDEFGHIJKLMNOPQURSTUVXYZ',
@@ -14,10 +14,9 @@ function generatePassword() {
   var upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   var specialChar = ['!', '$', '%', '#', '&', '_', '-', '(',')', '+', ';', ',','=' ,'?', '@', '^'];
   var numbers = ['1','2','3','4','5','6','7','8','9','0'];
+
   //created empty array for password
   var storePass = [];
-  
-  var newPass ='';
   var passLength = parseInt(prompt("How many characters would you like in your password? (8 to 128 characters)"));
 
   //checks if user inputs password length between 8 and 128
@@ -25,12 +24,13 @@ function generatePassword() {
     alert("Characters must be betweeen 8 to 128!");
   } 
   else {
+    //Confirm prompts for user to confirm whether to include specific characters
     var confirmNumber = confirm("Would you like to include numbers?");
     var confirmSpecial = confirm("Would you like to include special characters?");
     var confirmLowerCase = confirm("Would you like to inlude lowercase characters?");
     var confirmUpperCase = confirm("Would you like to include uppercase characters?");
 
-    //confirms whether the user confirms the following prompts and will push the arrays to storePass accordingly
+    //if confirmed, then push array into storePass array
     if (confirmNumber === true) {
       storePass.push(numbers);
     } 
@@ -43,14 +43,17 @@ function generatePassword() {
     if (confirmUpperCase === true) {
       storePass.push(upperChar);
     }
-      //loops characters in store 
+      var newPass= '';//empty string that will display generated password
+
+      //loops characters in store array 
       for(var i = 0; i < passLength; i++) {
-      newPass =+ storePass[Math.floor(Math.random() * storePass.length)];
-      
+      var randomArray = storePass[Math.floor(Math.random() * storePass.length)];
+      var ranChar = randomArray[Math.floor(Math.random() * randomArray.length)];
+      newPass += ranChar;
       }
+      console.log(newPass);//verifying code generates in console at least
     }
   return newPass;
-
 }
 // Write password to the #password input
 function writePassword() {
