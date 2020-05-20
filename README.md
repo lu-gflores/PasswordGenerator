@@ -1,5 +1,7 @@
 # Password Generator
 
+Deployed Link: https://lu-gflores.github.io/PasswordGenerator/
+
 ## Description 
 The purpose of this project is to create an app that will generate a password based on the user's criteria to which they may use for greater security. Given some of the fundamentals of JavaScript, I have been tasked with this assignment and must create the program so that it matches the user's given choices. This involved the use of arrays, conditional statements, and loops and how to make them coherent. To ensure this is accomplished, I followed the user story and acceptance criteria to ensure I fulfilled the the requirements below.   
 
