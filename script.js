@@ -8,7 +8,7 @@ var generateBtn = document.querySelector("#generate");
 //   specialChar:'!@#$%^&*()_+{};:/',
 //   numbers : '1234567890'
 //   }
-function generatePassword() {
+var generatePassword = () => {
   //Array for characters
   var lowerChar = ['a','b','c','d','e','f','g', 'h', 'i', 'j', 'k', 'l','m','n', 'o', 'p', 'q', 'r', 's','t' , 'u', 'v', 'w' ,'x' ,'y', 'z'];
   var upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -65,7 +65,7 @@ function generatePassword() {
   return newPass;
 }
 // Write password to the #password input
-function writePassword() {
+var writePassword = () => {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
