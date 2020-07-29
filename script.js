@@ -1,23 +1,16 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
-//characters object(Attempted another method for chars)
-// var passCharacters = {
-//   lowerChar: 'abcdefghijklmnopqrstuvwxz',
-//   upperChar: 'ABCDEFGHIJKLMNOPQURSTUVXYZ',
-//   specialChar:'!@#$%^&*()_+{};:/',
-//   numbers : '1234567890'
-//   }
-var generatePassword = () => {
+const generatePassword = () => {
   //Array for characters
-  var lowerChar = ['a','b','c','d','e','f','g', 'h', 'i', 'j', 'k', 'l','m','n', 'o', 'p', 'q', 'r', 's','t' , 'u', 'v', 'w' ,'x' ,'y', 'z'];
-  var upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  var specialChar = ['!', '$', '%', '#', '&', '_', '-', '(',')', '+', ';', ',','=' ,'?', '@', '^', '*', '<', '>', '/', '[', ']', '{', '}','`', '~'];
-  var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+  const lowerChar = ['a','b','c','d','e','f','g', 'h', 'i', 'j', 'k', 'l','m','n', 'o', 'p', 'q', 'r', 's','t' , 'u', 'v', 'w' ,'x' ,'y', 'z'];
+  const upperChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q','R','S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  const specialChar = ['!', '$', '%', '#', '&', '_', '-', '(',')', '+', ';', ',','=' ,'?', '@', '^', '*', '<', '>', '/', '[', ']', '{', '}','`', '~'];
+  const numbers = ['0','1','2','3','4','5','6','7','8','9'];
 
   //created empty array for password
-  var storePass = [];
-  var passLength = parseInt(prompt("How many characters would you like in your password? (8 to 128 characters)"));//passes an integer instead of string;
+  let storePass = [];
+  let passLength = parseInt(prompt("How many characters would you like in your password? (8 to 128 characters)"));//passes an integer instead of string;
 
   //checks if user inputs password length between 8 and 128
   if (passLength < 8 || passLength > 128) {
@@ -25,10 +18,10 @@ var generatePassword = () => {
   } 
   else {
     //Confirm prompts for user to confirm whether to include specific characters
-    var confirmNumber = confirm("Would you like to include numbers?");
-    var confirmSpecial = confirm("Would you like to include special characters?");
-    var confirmLowerCase = confirm("Would you like to inlude lowercase characters?");
-    var confirmUpperCase = confirm("Would you like to include uppercase characters?");
+    const confirmNumber = confirm("Would you like to include numbers?");
+    const confirmSpecial = confirm("Would you like to include special characters?");
+    const confirmLowerCase = confirm("Would you like to inlude lowercase characters?");
+    const confirmUpperCase = confirm("Would you like to include uppercase characters?");
 
     //if confirmed any of the following above, then push the array into storePass array
     if (confirmNumber === true) {
@@ -52,10 +45,10 @@ var generatePassword = () => {
       var newPass= '';
 
       //loops characters in store array 
-      for(var i = 0; i < passLength; i++) {
+      for(let i = 0; i < passLength; i++) {
       //picks an array from confirm prompts
-      var randomArray = storePass[Math.floor(Math.random() * storePass.length)];
-      var ranChar = randomArray[Math.floor(Math.random() * randomArray.length)];
+      let randomArray = storePass[Math.floor(Math.random() * storePass.length)];
+      let ranChar = randomArray[Math.floor(Math.random() * randomArray.length)];
       newPass += ranChar;
       }
 
@@ -65,9 +58,9 @@ var generatePassword = () => {
   return newPass;
 }
 // Write password to the #password input
-var writePassword = () => {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+const writePassword = () => {
+  const password = generatePassword();
+  const passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 
