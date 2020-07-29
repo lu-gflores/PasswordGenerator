@@ -3,47 +3,31 @@
 Deployed Link: https://lu-gflores.github.io/PasswordGenerator/
 
 ## Description 
-The purpose of this project is to create an app that will generate a password based on the user's criteria to which they may use for greater security. Given some of the fundamentals of JavaScript, I have been tasked with this assignment and must create the program so that it matches the user's given choices. This involved the use of arrays, conditional statements, and loops and how to make them coherent. To ensure this is accomplished, I followed the user story and acceptance criteria to ensure I fulfilled the the requirements below.   
+The purpose of this project is to create an app that will generate a password based on the user's criteria to which they may use for greater security. Given some of the fundamentals of JavaScript, I have been tasked with this assignment and must create the program so that it matches the user's given choices. This involved the use of arrays, conditional statements, and loops and how to make them coherent.
 
-## User Story
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Author](#author)
+
+## Installation 
+This project can be cloned by runnning the following command:
+
+```javascript
+git clone
+```
+
+Once cloned, open the ```index.html``` file in your web browser.
+
+## Usage
 
 ```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
+AS AN employee with access to sensitive information,
+I WANT to generate a random password with certain criteria
 SO THAT I can create a strong password that provides greater security
 ```
 
-## Acceptance Criteria
+## Author
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
-
-The following image demonstrates the application functionality:
-
-![password generator demo](./Assets/03-javascript-homework-demo.png)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Created by [George Flores](https://github.com/lu-gflores)
